@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#153c36">
+  <title>Khảo sát Phong cách Điều hành & Trợ lý AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span id="stepLabel">Giới thiệu / Introduction</span>
+      <span id="progressText">0%</span>
+    </div>
+    <div class="progress"><div id="progressBar"></div></div>
+  </header>
+
+  <main>
+    <form id="surveyForm" novalidate>
+      <section class="step active" data-title="Giới thiệu / Introduction">
+        <div class="hero-mark">CEO</div>
+        <p class="eyebrow">KHẢO SÁT ĐIỀU HÀNH / EXECUTIVE DISCOVERY</p>
+        <h1>Khảo sát Phong cách Điều hành & Trợ lý AI</h1>
+        <p class="subtitle">Executive Working Style & AI Assistant Discovery</p>
+        <p class="lead">Khảo sát gồm 5 phần, mất khoảng 8–10 phút. Câu trả lời giúp cá nhân hóa ưu tiên, cách trình bày thông tin và giới hạn ủy quyền của trợ lý AI.</p>
+        <p class="translation">Five concise sections to tailor the assistant to your priorities, briefing preferences and governance requirements.</p>
+        <div class="notice"><strong>Bảo mật / Confidential:</strong> Câu trả lời được lưu tạm trên thiết bị này và chỉ được xuất khi Anh/Chị xác nhận hoàn thành.</div>
+        <label class="field text-field">Họ và tên / Full name <span>(không bắt buộc / optional)</span>
+          <input type="text" name="ho_ten" autocomplete="name" placeholder="Nhập họ và tên / Enter full name">
+        </label>
+      </section>
+
+      <section class="step" data-title="Muc tieu">
+        <p class="eyebrow">PHAN 1/5</p><h2>Muc tieu va uu tien</h2>
+        <fieldset data-required="true"><legend>1. Trong quy nay, nhom muc tieu nao can duoc uu tien nhat?</legend>
+          <label><input type="radio" name="muc_tieu_quy" value="Tang truong doanh thu"><span>Tang truong doanh thu</span></label>
+          <label><input type="radio" name="muc_tieu_quy" value="Hieu qua van hanh"><span>Hieu qua van hanh</span></label>
+          <label><input type="radio" name="muc_tieu_quy" value="San pham va khach hang"><span>San pham va khach hang</span></label>
+          <label><input type="radio" name="muc_tieu_quy" value="Con nguoi va to chuc"><span>Con nguoi va to chuc</span></label>
+          <label><input type="radio" name="muc_tieu_quy" value="Quan tri rui ro"><span>Quan tri rui ro</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>2. Dieu gi khien mot van de can Anh/Chi can thiep ngay? <small>Chon toi da 3</small></legend>
+          <label><input type="checkbox" name="can_thiep_ngay" value="Anh huong doanh thu/dong tien" data-max="3"><span>Anh huong doanh thu/dong tien</span></label>
+          <label><input type="checkbox" name="can_thiep_ngay" value="Rui ro phap ly/bao mat" data-max="3"><span>Rui ro phap ly/bao mat</span></label>
+          <label><input type="checkbox" name="can_thiep_ngay" value="Khach hang/doi tac chien luoc" data-max="3"><span>Khach hang/doi tac chien luoc</span></label>
+          <label><input type="checkbox" name="can_thiep_ngay" value="Nhan su chu chot" data-max="3"><span>Nhan su chu chot</span></label>
+          <label><input type="checkbox" name="can_thiep_ngay" value="Anh huong uy tin" data-max="3"><span>Anh huong uy tin</span></label>
+          <label><input type="checkbox" name="can_thiep_ngay" value="Cham moc quan trong" data-max="3"><span>Cham moc quan trong</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>3. Anh/Chi danh gia mot ngay hieu qua dua tren yeu to nao nhat?</legend>
+          <label><input type="radio" name="ngay_hieu_qua" value="Quyet dinh quan trong da duoc dua ra"><span>Quyet dinh quan trong da duoc dua ra</span></label>
+          <label><input type="radio" name="ngay_hieu_qua" value="Uu tien chien luoc co tien trien"><span>Uu tien chien luoc co tien trien</span></label>
+          <label><input type="radio" name="ngay_hieu_qua" value="Khong con viec gap bi bo sot"><span>Khong con viec gap bi bo sot</span></label>
+          <label><input type="radio" name="ngay_hieu_qua" value="Co du thoi gian tap trung"><span>Co du thoi gian tap trung</span></label>
+        </fieldset>
+      </section>
+
+      <section class="step" data-title="Nhip lam viec">
+        <p class="eyebrow">PHAN 2/5</p><h2>Nhip lam viec hang ngay</h2>
+        <fieldset data-required="true"><legend>4. Khung gio nao tot nhat de xu ly cong viec can tap trung?</legend>
+          <label><input type="radio" name="gio_tap_trung" value="Truoc 8:00"><span>Truoc 8:00</span></label><label><input type="radio" name="gio_tap_trung" value="8:00-11:00"><span>8:00-11:00</span></label><label><input type="radio" name="gio_tap_trung" value="13:00-16:00"><span>13:00-16:00</span></label><label><input type="radio" name="gio_tap_trung" value="Sau 16:00"><span>Sau 16:00</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>5. Anh/Chi muon nhan ban tin dieu hanh buoi sang luc nao?</legend>
+          <label><input type="radio" name="gio_ban_tin" value="Truoc 6:30"><span>Truoc 6:30</span></label><label><input type="radio" name="gio_ban_tin" value="6:30-7:30"><span>6:30-7:30</span></label><label><input type="radio" name="gio_ban_tin" value="7:30-8:30"><span>7:30-8:30</span></label><label><input type="radio" name="gio_ban_tin" value="Khong can ban tin hang ngay"><span>Khong can ban tin hang ngay</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>6. Nhung kenh nao dang chiem nhieu thoi gian nhat? <small>Chon toi da 3</small></legend>
+          <label><input type="checkbox" name="kenh_ton_thoi_gian" value="Email" data-max="3"><span>Email</span></label><label><input type="checkbox" name="kenh_ton_thoi_gian" value="Zalo/Chat" data-max="3"><span>Zalo/Chat</span></label><label><input type="checkbox" name="kenh_ton_thoi_gian" value="Hop" data-max="3"><span>Hop</span></label><label><input type="checkbox" name="kenh_ton_thoi_gian" value="Dien thoai" data-max="3"><span>Dien thoai</span></label><label><input type="checkbox" name="kenh_ton_thoi_gian" value="Bao cao/tai lieu" data-max="3"><span>Bao cao/tai lieu</span></label>
+        </fieldset>
+      </section>
+
+      <section class="step" data-title="Thong tin">
+        <p class="eyebrow">PHAN 3/5</p><h2>Cach tiep nhan thong tin</h2>
+        <fieldset data-required="true"><legend>7. Dinh dang tom tat Anh/Chi uu tien?</legend>
+          <label><input type="radio" name="dinh_dang" value="3-5 gach dau dong rat ngan"><span>3-5 gach dau dong rat ngan</span></label><label><input type="radio" name="dinh_dang" value="Tom tat mot trang co du boi canh"><span>Tom tat mot trang co du boi canh</span></label><label><input type="radio" name="dinh_dang" value="Bang va chi so"><span>Bang va chi so</span></label><label><input type="radio" name="dinh_dang" value="Bieu do kem nhan dinh"><span>Bieu do kem nhan dinh</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>8. Khi thong tin chua chac chan, AI nen lam gi?</legend>
+          <label><input type="radio" name="thong_tin_chua_chac" value="Danh dau ro muc do tin cay va van trinh bay"><span>Danh dau muc do tin cay va van trinh bay</span></label><label><input type="radio" name="thong_tin_chua_chac" value="Chi trinh bay khi co it nhat hai nguon"><span>Chi trinh bay khi co it nhat hai nguon</span></label><label><input type="radio" name="thong_tin_chua_chac" value="Hoi lai truoc khi trinh bay"><span>Hoi lai truoc khi trinh bay</span></label><label><input type="radio" name="thong_tin_chua_chac" value="Khong dua vao bao cao"><span>Khong dua vao bao cao</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>9. Noi dung nao nen xuat hien trong ban tin buoi sang? <small>Chon toi da 4</small></legend>
+          <label><input type="checkbox" name="noi_dung_ban_tin" value="Lich va xung dot" data-max="4"><span>Lich va xung dot</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Email/tin nhan quan trong" data-max="4"><span>Email/tin nhan quan trong</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Viec den han/tre han" data-max="4"><span>Viec den han/tre han</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="KPI va canh bao" data-max="4"><span>KPI va canh bao</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Quyet dinh dang cho" data-max="4"><span>Quyet dinh dang cho</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Tin thi truong/doi thu" data-max="4"><span>Tin thi truong/doi thu</span></label>
+        </fieldset>
+      </section>
+
+      <section class="step" data-title="Uy quyen">
+        <p class="eyebrow">PHAN 4/5</p><h2>Uy quyen va bao mat</h2>
+        <fieldset data-required="true"><legend>10. Trong giai doan thu nghiem, AI duoc phep lam den muc nao?</legend>
+          <label><input type="radio" name="muc_uy_quyen" value="Chi doc, tom tat va de xuat"><span>Chi doc, tom tat va de xuat</span></label><label><input type="radio" name="muc_uy_quyen" value="Soan nhap va cho phe duyet"><span>Soan nhap va cho phe duyet</span></label><label><input type="radio" name="muc_uy_quyen" value="Tu dong viec rui ro thap theo quy tac"><span>Tu dong viec rui ro thap theo quy tac</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>11. Nguon du lieu nao co the ket noi o che do chi doc? <small>Chon tat ca phu hop</small></legend>
+          <label><input type="checkbox" name="nguon_du_lieu" value="Email"><span>Email</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Lich"><span>Lich</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Danh sach cong viec"><span>Danh sach cong viec</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Kho tai lieu"><span>Kho tai lieu</span></label><label><input type="checkbox" name="nguon_du_lieu" value="CRM/ERP"><span>CRM/ERP</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Chua cho phep ket noi"><span>Chua cho phep ket noi</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>12. Hanh dong nao luon can phe duyet? <small>Chon tat ca phu hop</small></legend>
+          <label><input type="checkbox" name="luon_phe_duyet" value="Gui email/tin nhan"><span>Gui email/tin nhan</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Sua/huy lich"><span>Sua/huy lich</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Giao viec cho nhan su"><span>Giao viec cho nhan su</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Chia se tai lieu"><span>Chia se tai lieu</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Chi phi/hop dong/cam ket"><span>Chi phi/hop dong/cam ket</span></label>
+        </fieldset>
+      </section>
+
+      <section class="step" data-title="MVP">
+        <p class="eyebrow">PHAN 5/5</p><h2>Uu tien cho phien ban dau tien</h2>
+        <fieldset data-required="true"><legend>13. Chon 3 tinh huong co gia tri nhat cho MVP.</legend>
+          <label><input type="checkbox" name="use_case_mvp" value="Tom tat va phan loai email" data-max="3"><span>Tom tat va phan loai email</span></label><label><input type="checkbox" name="use_case_mvp" value="Ban tin dieu hanh buoi sang" data-max="3"><span>Ban tin dieu hanh buoi sang</span></label><label><input type="checkbox" name="use_case_mvp" value="Quan ly viec va nhac han" data-max="3"><span>Quan ly viec va nhac han</span></label><label><input type="checkbox" name="use_case_mvp" value="Phat hien xung dot lich" data-max="3"><span>Phat hien xung dot lich</span></label><label><input type="checkbox" name="use_case_mvp" value="Tim kiem tai lieu co nguon" data-max="3"><span>Tim kiem tai lieu co nguon</span></label><label><input type="checkbox" name="use_case_mvp" value="Soan du thao email" data-max="3"><span>Soan du thao email</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>14. Ket qua nao quan trong nhat sau 4 tuan thu nghiem?</legend>
+          <label><input type="radio" name="ket_qua_4_tuan" value="Tiet kiem it nhat 5 gio/tuan"><span>Tiet kiem it nhat 5 gio/tuan</span></label><label><input type="radio" name="ket_qua_4_tuan" value="Khong bo sot viec quan trong"><span>Khong bo sot viec quan trong</span></label><label><input type="radio" name="ket_qua_4_tuan" value="Giam thoi gian chuan bi hop/bao cao"><span>Giam thoi gian chuan bi hop/bao cao</span></label><label><input type="radio" name="ket_qua_4_tuan" value="Goi y dung va it phai sua"><span>Goi y dung va it phai sua</span></label>
+        </fieldset>
+        <label class="field text-field">15. Dieu gi tro ly AI tuyet doi khong duoc lam? <span>(khong bat buoc)</span>
+          <textarea name="hanh_dong_cam" rows="4" placeholder="Vi du: gui thong tin ra ngoai khi chua phe duyet..."></textarea>
+        </label>
+      </section>
+
+      <section class="step result" data-title="Hoan thanh">
+        <div class="success-mark">&#10003;</div><p class="eyebrow">HOAN THANH</p><h2>Cam on Anh/Chi da hoan thanh khao sat</h2>
+        <p class="lead">Cau tra loi van dang nam tren thiet bi nay. Vui long tai file ket qua va gui cho nguoi phu trach du an.</p>
+        <button type="button" class="primary full" id="downloadBtn">Tai file ket qua</button>
+        <button type="button" class="secondary full" id="copyBtn">Sao che ban tom tat</button>
+        <p class="privacy-note">Sau khi xac nhan da gui file, Anh/Chi co the xoa du lieu da luu tren thiet bi.</p>
+        <button type="button" class="link-button" id="clearBtn">Xoa cau tra loi va lam lai</button>
+      </section>
+
+      <div class="error" id="errorMessage" role="alert"></div>
+      <nav id="formNav"><button type="button" class="secondary" id="backBtn">Quay lai</button><button type="button" class="primary" id="nextBtn">Bat dau</button></nav>
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
