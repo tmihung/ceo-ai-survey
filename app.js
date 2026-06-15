@@ -50,8 +50,11 @@ submitBtn.addEventListener('click',async()=>{
     }
     const api=endpoint();
     if(!api)throw new Error('Chưa cấu hình API database công khai');
-    const response=await fetch(api,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(record)});const result=await response.json();if(!response.ok)throw new Error(result.error||'Không thể lưu kết quả');
-    await saveLocal({...record,server_result:result},'synced');localStorage.setItem(`${storageKey}-submission`,JSON.stringify(result));submitStatus.textContent=`Đã lưu vào database dự án và database trên thiết bị. Mã hồ sơ: ${result.id||record.submission_id}`;submitBtn.textContent='Đã gửi dữ liệu';
+    // Apps Script redirects POST responses to googleusercontent.com. no-cors avoids
+    // browsers treating that redirect as a failed cross-origin response.
+    await fetch(api,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(record)});
+    const result={ok:true,id:record.submission_id,saved_at:new Date().toISOString(),transport:'apps-script-no-cors'};
+    await saveLocal({...record,server_result:result},'sent');localStorage.setItem(`${storageKey}-submission`,JSON.stringify(result));submitStatus.textContent=`Đã gửi đến database dự án và lưu bản sao trên thiết bị. Mã hồ sơ: ${record.submission_id}`;submitBtn.textContent='Đã gửi dữ liệu';
   }catch(e){
     await saveLocal(record,'pending').catch(()=>{});submitStatus.textContent=`Đã lưu an toàn trên thiết bị nhưng chưa gửi được: ${e.message}. Có thể chọn gửi qua email hoặc thử lại sau.`;submitBtn.disabled=false;submitBtn.textContent='Gửi lại dữ liệu khảo sát';
   }
