@@ -176,6 +176,10 @@
       <section class="step result" data-title="Hoàn thành">
         <div class="success-mark">&#10003;</div><p class="eyebrow">HOÀN THÀNH</p><h2>Cảm ơn Anh/Chị đã hoàn thành khảo sát</h2>
         <p class="lead">Bấm gửi để lưu kết quả vào database của dự án. Chỉ xóa dữ liệu trên thiết bị sau khi hệ thống xác nhận đã lưu thành công.</p>
+        <fieldset><legend>Phương thức gửi kết quả</legend>
+          <label><input type="radio" name="submission_method" value="database" checked><span>Gửi đến database dự án</span></label>
+          <label><input type="radio" name="submission_method" value="email"><span>Gửi qua email</span></label>
+        </fieldset>
         <button type="button" class="primary full" id="submitBtn">Gửi dữ liệu khảo sát</button>
         <p class="privacy-note" id="submitStatus" role="status" aria-live="polite"></p>
         <button type="button" class="secondary full" id="downloadBtn">Tải file kết quả</button>
@@ -188,6 +192,7 @@
       <nav id="formNav"><button type="button" class="secondary" id="backBtn">Quay lại</button><button type="button" class="primary" id="nextBtn">Bắt đầu</button></nav>
     </form>
   </main>
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
