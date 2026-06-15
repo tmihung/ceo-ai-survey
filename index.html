@@ -4,121 +4,188 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#153c36">
-  <title>Khảo sát Phong cách Điều hành & Trợ lý AI</title>
+  <title>Khảo sát Hồ sơ Điều hành & Trợ lý AI</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
-    <div class="topbar-inner">
-      <span id="stepLabel">Giới thiệu / Introduction</span>
-      <span id="progressText">0%</span>
-    </div>
+    <div class="topbar-inner"><span id="stepLabel">Giới thiệu</span><span id="progressText">0%</span></div>
     <div class="progress"><div id="progressBar"></div></div>
   </header>
 
   <main>
     <form id="surveyForm" novalidate>
-      <section class="step active" data-title="Giới thiệu / Introduction">
-        <div class="hero-mark">CEO</div>
-        <p class="eyebrow">KHẢO SÁT ĐIỀU HÀNH / EXECUTIVE DISCOVERY</p>
-        <h1>Khảo sát Phong cách Điều hành & Trợ lý AI</h1>
-        <p class="subtitle">Executive Working Style & AI Assistant Discovery</p>
-        <p class="lead">Khảo sát gồm 5 phần, mất khoảng 8–10 phút. Câu trả lời giúp cá nhân hóa ưu tiên, cách trình bày thông tin và giới hạn ủy quyền của trợ lý AI.</p>
-        <p class="translation">Five concise sections to tailor the assistant to your priorities, briefing preferences and governance requirements.</p>
-        <div class="notice"><strong>Bảo mật / Confidential:</strong> Câu trả lời được lưu tạm trên thiết bị này và chỉ được xuất khi Anh/Chị xác nhận hoàn thành.</div>
-        <label class="field text-field">Họ và tên / Full name <span>(không bắt buộc / optional)</span>
-          <input type="text" name="ho_ten" autocomplete="name" placeholder="Nhập họ và tên / Enter full name">
+      <section class="step active" data-title="Giới thiệu">
+        <div class="hero-mark">EXE</div>
+        <p class="eyebrow">KHẢO SÁT HỒ SƠ ĐIỀU HÀNH / EXECUTIVE DISCOVERY</p>
+        <h1>Khảo sát Hồ sơ Điều hành & Trợ lý AI</h1>
+        <p class="subtitle">Executive Profile & AI Assistant Discovery</p>
+        <p class="lead">Dành cho người dùng lãnh đạo, thành viên HĐQT, thư ký công ty và trợ lý điều hành được ủy quyền. Khảo sát sàng lọc gồm 6 phần, mất khoảng 12–15 phút.</p>
+        <p class="translation">Kết quả dùng để chuẩn bị phỏng vấn discovery và cấu hình thử nghiệm theo tổ chức, vai trò, ngành và cá nhân; không tự động trở thành chính sách hay quyền truy cập chính thức.</p>
+        <div class="notice"><strong>Bảo mật:</strong> Không nhập bí mật kinh doanh, dữ liệu cá nhân nhạy cảm hoặc nội dung tài liệu HĐQT. Câu trả lời được lưu tạm trên thiết bị này và chỉ được xuất khi Anh/Chị chủ động tải xuống.</div>
+        <label class="field text-field">Mã tổ chức/tenant <span>(dùng mã nghiên cứu, không cần tên pháp nhân)</span>
+          <input type="text" name="ma_tenant" placeholder="Ví dụ: VN-FIN-01">
+        </label>
+        <label class="field text-field">Họ và tên <span>(không bắt buộc)</span>
+          <input type="text" name="ho_ten" autocomplete="name" placeholder="Nhập họ và tên">
         </label>
       </section>
 
-      <section class="step" data-title="Muc tieu">
-        <p class="eyebrow">PHAN 1/5</p><h2>Muc tieu va uu tien</h2>
-        <fieldset data-required="true"><legend>1. Trong quy nay, nhom muc tieu nao can duoc uu tien nhat?</legend>
-          <label><input type="radio" name="muc_tieu_quy" value="Tang truong doanh thu"><span>Tang truong doanh thu</span></label>
-          <label><input type="radio" name="muc_tieu_quy" value="Hieu qua van hanh"><span>Hieu qua van hanh</span></label>
-          <label><input type="radio" name="muc_tieu_quy" value="San pham va khach hang"><span>San pham va khach hang</span></label>
-          <label><input type="radio" name="muc_tieu_quy" value="Con nguoi va to chuc"><span>Con nguoi va to chuc</span></label>
-          <label><input type="radio" name="muc_tieu_quy" value="Quan tri rui ro"><span>Quan tri rui ro</span></label>
+      <section class="step" data-title="Vai trò & tổ chức">
+        <p class="eyebrow">PHẦN 1/6</p><h2>Vai trò và bối cảnh tổ chức</h2>
+        <fieldset data-required="true"><legend>1. Vai trò hiện tại của Anh/Chị gần nhất với nhóm nào?</legend>
+          <label><input type="radio" name="vai_tro" value="Chủ tịch HĐQT/HĐTV"><span>Chủ tịch HĐQT/HĐTV</span></label>
+          <label><input type="radio" name="vai_tro" value="Thành viên HĐQT/HĐTV"><span>Thành viên HĐQT/HĐTV</span></label>
+          <label><input type="radio" name="vai_tro" value="CEO/Tổng giám đốc"><span>CEO/Tổng giám đốc</span></label>
+          <label><input type="radio" name="vai_tro" value="Phó tổng giám đốc/Giám đốc chức năng"><span>Phó tổng giám đốc/Giám đốc chức năng (COO, CFO, CHRO, CIO...)</span></label>
+          <label><input type="radio" name="vai_tro" value="Chủ doanh nghiệp/Nhà sáng lập"><span>Chủ doanh nghiệp/Nhà sáng lập</span></label>
+          <label><input type="radio" name="vai_tro" value="Thư ký công ty/HĐQT"><span>Thư ký công ty/Thư ký HĐQT</span></label>
+          <label><input type="radio" name="vai_tro" value="Trợ lý điều hành được ủy quyền"><span>Trợ lý điều hành được ủy quyền</span></label>
         </fieldset>
-        <fieldset data-required="true"><legend>2. Dieu gi khien mot van de can Anh/Chi can thiep ngay? <small>Chon toi da 3</small></legend>
-          <label><input type="checkbox" name="can_thiep_ngay" value="Anh huong doanh thu/dong tien" data-max="3"><span>Anh huong doanh thu/dong tien</span></label>
-          <label><input type="checkbox" name="can_thiep_ngay" value="Rui ro phap ly/bao mat" data-max="3"><span>Rui ro phap ly/bao mat</span></label>
-          <label><input type="checkbox" name="can_thiep_ngay" value="Khach hang/doi tac chien luoc" data-max="3"><span>Khach hang/doi tac chien luoc</span></label>
-          <label><input type="checkbox" name="can_thiep_ngay" value="Nhan su chu chot" data-max="3"><span>Nhan su chu chot</span></label>
-          <label><input type="checkbox" name="can_thiep_ngay" value="Anh huong uy tin" data-max="3"><span>Anh huong uy tin</span></label>
-          <label><input type="checkbox" name="can_thiep_ngay" value="Cham moc quan trong" data-max="3"><span>Cham moc quan trong</span></label>
+        <fieldset data-required="true"><legend>1a. Anh/Chị có đang kiêm nhiệm vai trò nào khác? <small>Chọn tất cả phù hợp</small></legend>
+          <label><input type="checkbox" name="vai_tro_kiem_nhiem" value="Không kiêm nhiệm"><span>Không kiêm nhiệm</span></label><label><input type="checkbox" name="vai_tro_kiem_nhiem" value="Chủ sở hữu/cổ đông lớn"><span>Chủ sở hữu/cổ đông lớn</span></label><label><input type="checkbox" name="vai_tro_kiem_nhiem" value="Thành viên HĐQT/HĐTV"><span>Thành viên HĐQT/HĐTV</span></label><label><input type="checkbox" name="vai_tro_kiem_nhiem" value="Vai trò điều hành"><span>Vai trò điều hành</span></label><label><input type="checkbox" name="vai_tro_kiem_nhiem" value="Ủy ban thuộc HĐQT"><span>Ủy ban thuộc HĐQT</span></label><label><input type="checkbox" name="vai_tro_kiem_nhiem" value="Nhiều pháp nhân/đơn vị"><span>Nhiều pháp nhân/đơn vị</span></label>
         </fieldset>
-        <fieldset data-required="true"><legend>3. Anh/Chi danh gia mot ngay hieu qua dua tren yeu to nao nhat?</legend>
-          <label><input type="radio" name="ngay_hieu_qua" value="Quyet dinh quan trong da duoc dua ra"><span>Quyet dinh quan trong da duoc dua ra</span></label>
-          <label><input type="radio" name="ngay_hieu_qua" value="Uu tien chien luoc co tien trien"><span>Uu tien chien luoc co tien trien</span></label>
-          <label><input type="radio" name="ngay_hieu_qua" value="Khong con viec gap bi bo sot"><span>Khong con viec gap bi bo sot</span></label>
-          <label><input type="radio" name="ngay_hieu_qua" value="Co du thoi gian tap trung"><span>Co du thoi gian tap trung</span></label>
+        <fieldset data-required="true"><legend>2. Ngành hoạt động chính của tổ chức?</legend>
+          <label><input type="radio" name="nganh" value="Tài chính-Ngân hàng-Bảo hiểm"><span>Tài chính, Ngân hàng, Chứng khoán, Bảo hiểm</span></label>
+          <label><input type="radio" name="nganh" value="Sản xuất-Công nghiệp-Năng lượng"><span>Sản xuất, Công nghiệp, Năng lượng</span></label>
+          <label><input type="radio" name="nganh" value="Bất động sản-Xây dựng"><span>Bất động sản, Xây dựng, Hạ tầng</span></label>
+          <label><input type="radio" name="nganh" value="Bán lẻ-Tiêu dùng-Dịch vụ"><span>Bán lẻ, Hàng tiêu dùng, Dịch vụ</span></label>
+          <label><input type="radio" name="nganh" value="Công nghệ-Viễn thông-Truyền thông"><span>Công nghệ, Viễn thông, Truyền thông</span></label>
+          <label><input type="radio" name="nganh" value="Y tế-Dược-Giáo dục"><span>Y tế, Dược, Giáo dục</span></label>
+          <label><input type="radio" name="nganh" value="Logistics-Vận tải-Du lịch"><span>Logistics, Vận tải, Du lịch, Khách sạn</span></label>
+          <label><input type="radio" name="nganh" value="Nông nghiệp-Thực phẩm"><span>Nông nghiệp, Thực phẩm</span></label>
+          <label><input type="radio" name="nganh" value="Dịch vụ chuyên môn/Khác"><span>Dịch vụ chuyên môn hoặc ngành khác</span></label>
         </fieldset>
-      </section>
-
-      <section class="step" data-title="Nhip lam viec">
-        <p class="eyebrow">PHAN 2/5</p><h2>Nhip lam viec hang ngay</h2>
-        <fieldset data-required="true"><legend>4. Khung gio nao tot nhat de xu ly cong viec can tap trung?</legend>
-          <label><input type="radio" name="gio_tap_trung" value="Truoc 8:00"><span>Truoc 8:00</span></label><label><input type="radio" name="gio_tap_trung" value="8:00-11:00"><span>8:00-11:00</span></label><label><input type="radio" name="gio_tap_trung" value="13:00-16:00"><span>13:00-16:00</span></label><label><input type="radio" name="gio_tap_trung" value="Sau 16:00"><span>Sau 16:00</span></label>
+        <fieldset data-required="true"><legend>3. Mô hình quản trị phù hợp nhất?</legend>
+          <label><input type="radio" name="mo_hinh_quan_tri" value="Doanh nghiệp chủ sở hữu/gia đình"><span>Doanh nghiệp do chủ sở hữu/gia đình điều hành</span></label>
+          <label><input type="radio" name="mo_hinh_quan_tri" value="Công ty HĐQT điều hành chuyên nghiệp"><span>Công ty có HĐQT và ban điều hành chuyên nghiệp</span></label>
+          <label><input type="radio" name="mo_hinh_quan_tri" value="Công ty đại chúng/niêm yết"><span>Công ty đại chúng/niêm yết</span></label>
+          <label><input type="radio" name="mo_hinh_quan_tri" value="Tập đoàn đa quốc gia/liên doanh"><span>Tập đoàn đa quốc gia/liên doanh</span></label>
+          <label><input type="radio" name="mo_hinh_quan_tri" value="Doanh nghiệp nhà nước/đơn vị công"><span>Doanh nghiệp nhà nước/đơn vị công</span></label>
+          <label><input type="radio" name="mo_hinh_quan_tri" value="Startup/PE-VC backed"><span>Startup hoặc doanh nghiệp có quỹ đầu tư</span></label>
         </fieldset>
-        <fieldset data-required="true"><legend>5. Anh/Chi muon nhan ban tin dieu hanh buoi sang luc nao?</legend>
-          <label><input type="radio" name="gio_ban_tin" value="Truoc 6:30"><span>Truoc 6:30</span></label><label><input type="radio" name="gio_ban_tin" value="6:30-7:30"><span>6:30-7:30</span></label><label><input type="radio" name="gio_ban_tin" value="7:30-8:30"><span>7:30-8:30</span></label><label><input type="radio" name="gio_ban_tin" value="Khong can ban tin hang ngay"><span>Khong can ban tin hang ngay</span></label>
+        <fieldset data-required="true"><legend>3a. Mức độ điều hành và ra quyết định của tổ chức?</legend>
+          <label><input type="radio" name="muc_do_tap_trung" value="Tập trung tại trụ sở/HĐQT"><span>Tập trung tại trụ sở/HĐQT</span></label><label><input type="radio" name="muc_do_tap_trung" value="Tập trung tại ban điều hành"><span>Tập trung tại ban điều hành</span></label><label><input type="radio" name="muc_do_tap_trung" value="Phân quyền theo đơn vị/chức năng"><span>Phân quyền theo đơn vị/chức năng</span></label><label><input type="radio" name="muc_do_tap_trung" value="Mô hình kết hợp"><span>Mô hình kết hợp</span></label>
         </fieldset>
-        <fieldset data-required="true"><legend>6. Nhung kenh nao dang chiem nhieu thoi gian nhat? <small>Chon toi da 3</small></legend>
-          <label><input type="checkbox" name="kenh_ton_thoi_gian" value="Email" data-max="3"><span>Email</span></label><label><input type="checkbox" name="kenh_ton_thoi_gian" value="Zalo/Chat" data-max="3"><span>Zalo/Chat</span></label><label><input type="checkbox" name="kenh_ton_thoi_gian" value="Hop" data-max="3"><span>Hop</span></label><label><input type="checkbox" name="kenh_ton_thoi_gian" value="Dien thoai" data-max="3"><span>Dien thoai</span></label><label><input type="checkbox" name="kenh_ton_thoi_gian" value="Bao cao/tai lieu" data-max="3"><span>Bao cao/tai lieu</span></label>
+        <fieldset data-required="true"><legend>4. Quy mô tổ chức theo số nhân sự?</legend>
+          <label><input type="radio" name="quy_mo" value="Dưới 50"><span>Dưới 50</span></label><label><input type="radio" name="quy_mo" value="50-199"><span>50–199</span></label><label><input type="radio" name="quy_mo" value="200-999"><span>200–999</span></label><label><input type="radio" name="quy_mo" value="1000-4999"><span>1.000–4.999</span></label><label><input type="radio" name="quy_mo" value="Từ 5000"><span>Từ 5.000</span></label>
         </fieldset>
-      </section>
-
-      <section class="step" data-title="Thong tin">
-        <p class="eyebrow">PHAN 3/5</p><h2>Cach tiep nhan thong tin</h2>
-        <fieldset data-required="true"><legend>7. Dinh dang tom tat Anh/Chi uu tien?</legend>
-          <label><input type="radio" name="dinh_dang" value="3-5 gach dau dong rat ngan"><span>3-5 gach dau dong rat ngan</span></label><label><input type="radio" name="dinh_dang" value="Tom tat mot trang co du boi canh"><span>Tom tat mot trang co du boi canh</span></label><label><input type="radio" name="dinh_dang" value="Bang va chi so"><span>Bang va chi so</span></label><label><input type="radio" name="dinh_dang" value="Bieu do kem nhan dinh"><span>Bieu do kem nhan dinh</span></label>
+        <fieldset data-required="true"><legend>5. Phạm vi điều hành chính?</legend>
+          <label><input type="radio" name="pham_vi" value="Một đơn vị/thị trường"><span>Một đơn vị hoặc một thị trường</span></label><label><input type="radio" name="pham_vi" value="Toàn quốc"><span>Toàn quốc</span></label><label><input type="radio" name="pham_vi" value="Khu vực Đông Nam Á/Châu Á"><span>Khu vực Đông Nam Á/Châu Á</span></label><label><input type="radio" name="pham_vi" value="Toàn cầu"><span>Toàn cầu</span></label>
         </fieldset>
-        <fieldset data-required="true"><legend>8. Khi thong tin chua chac chan, AI nen lam gi?</legend>
-          <label><input type="radio" name="thong_tin_chua_chac" value="Danh dau ro muc do tin cay va van trinh bay"><span>Danh dau muc do tin cay va van trinh bay</span></label><label><input type="radio" name="thong_tin_chua_chac" value="Chi trinh bay khi co it nhat hai nguon"><span>Chi trinh bay khi co it nhat hai nguon</span></label><label><input type="radio" name="thong_tin_chua_chac" value="Hoi lai truoc khi trinh bay"><span>Hoi lai truoc khi trinh bay</span></label><label><input type="radio" name="thong_tin_chua_chac" value="Khong dua vao bao cao"><span>Khong dua vao bao cao</span></label>
-        </fieldset>
-        <fieldset data-required="true"><legend>9. Noi dung nao nen xuat hien trong ban tin buoi sang? <small>Chon toi da 4</small></legend>
-          <label><input type="checkbox" name="noi_dung_ban_tin" value="Lich va xung dot" data-max="4"><span>Lich va xung dot</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Email/tin nhan quan trong" data-max="4"><span>Email/tin nhan quan trong</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Viec den han/tre han" data-max="4"><span>Viec den han/tre han</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="KPI va canh bao" data-max="4"><span>KPI va canh bao</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Quyet dinh dang cho" data-max="4"><span>Quyet dinh dang cho</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Tin thi truong/doi thu" data-max="4"><span>Tin thi truong/doi thu</span></label>
+        <fieldset data-required="true"><legend>5a. Phạm vi trách nhiệm hiện tại? <small>Chọn tối đa 4</small></legend>
+          <label><input type="checkbox" name="pham_vi_trach_nhiem" value="Toàn doanh nghiệp" data-max="4"><span>Toàn doanh nghiệp</span></label><label><input type="checkbox" name="pham_vi_trach_nhiem" value="Một chức năng chuyên môn" data-max="4"><span>Một chức năng chuyên môn</span></label><label><input type="checkbox" name="pham_vi_trach_nhiem" value="Một đơn vị kinh doanh/pháp nhân" data-max="4"><span>Một đơn vị kinh doanh/pháp nhân</span></label><label><input type="checkbox" name="pham_vi_trach_nhiem" value="Giám sát HĐQT/ủy ban" data-max="4"><span>Giám sát HĐQT/ủy ban</span></label><label><input type="checkbox" name="pham_vi_trach_nhiem" value="Điều phối thay người ủy quyền" data-max="4"><span>Điều phối thay người ủy quyền</span></label><label><input type="checkbox" name="pham_vi_trach_nhiem" value="Nhiều quốc gia/múi giờ" data-max="4"><span>Nhiều quốc gia/múi giờ</span></label>
         </fieldset>
       </section>
 
-      <section class="step" data-title="Uy quyen">
-        <p class="eyebrow">PHAN 4/5</p><h2>Uy quyen va bao mat</h2>
-        <fieldset data-required="true"><legend>10. Trong giai doan thu nghiem, AI duoc phep lam den muc nao?</legend>
-          <label><input type="radio" name="muc_uy_quyen" value="Chi doc, tom tat va de xuat"><span>Chi doc, tom tat va de xuat</span></label><label><input type="radio" name="muc_uy_quyen" value="Soan nhap va cho phe duyet"><span>Soan nhap va cho phe duyet</span></label><label><input type="radio" name="muc_uy_quyen" value="Tu dong viec rui ro thap theo quy tac"><span>Tu dong viec rui ro thap theo quy tac</span></label>
+      <section class="step" data-title="Ưu tiên chiến lược">
+        <p class="eyebrow">PHẦN 2/6</p><h2>Ưu tiên chiến lược và điểm cần can thiệp</h2>
+        <fieldset data-required="true"><legend>6. Ba ưu tiên quan trọng nhất trong 12 tháng tới? <small>Chọn tối đa 3</small></legend>
+          <label><input type="checkbox" name="uu_tien" value="Tăng trưởng doanh thu/thị phần" data-max="3"><span>Tăng trưởng doanh thu/thị phần</span></label><label><input type="checkbox" name="uu_tien" value="Lợi nhuận-dòng tiền-hiệu quả vốn" data-max="3"><span>Lợi nhuận, dòng tiền, hiệu quả vốn</span></label><label><input type="checkbox" name="uu_tien" value="Khách hàng-sản phẩm-thị trường mới" data-max="3"><span>Khách hàng, sản phẩm, thị trường mới</span></label><label><input type="checkbox" name="uu_tien" value="Hiệu quả vận hành/chuỗi cung ứng" data-max="3"><span>Hiệu quả vận hành/chuỗi cung ứng</span></label><label><input type="checkbox" name="uu_tien" value="Chuyển đổi số-Công nghệ-AI" data-max="3"><span>Chuyển đổi số, Công nghệ, AI</span></label><label><input type="checkbox" name="uu_tien" value="Nhân sự-văn hóa-kế nhiệm" data-max="3"><span>Nhân sự, văn hóa, kế nhiệm</span></label><label><input type="checkbox" name="uu_tien" value="M&A-đầu tư-tái cấu trúc" data-max="3"><span>M&A, đầu tư, tái cấu trúc</span></label><label><input type="checkbox" name="uu_tien" value="Quản trị-tuân thủ-ESG" data-max="3"><span>Quản trị, tuân thủ, ESG</span></label>
         </fieldset>
-        <fieldset data-required="true"><legend>11. Nguon du lieu nao co the ket noi o che do chi doc? <small>Chon tat ca phu hop</small></legend>
-          <label><input type="checkbox" name="nguon_du_lieu" value="Email"><span>Email</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Lich"><span>Lich</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Danh sach cong viec"><span>Danh sach cong viec</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Kho tai lieu"><span>Kho tai lieu</span></label><label><input type="checkbox" name="nguon_du_lieu" value="CRM/ERP"><span>CRM/ERP</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Chua cho phep ket noi"><span>Chua cho phep ket noi</span></label>
+        <fieldset data-required="true"><legend>7. Tình huống nào cần báo ngay cho Anh/Chị? <small>Chọn tối đa 4</small></legend>
+          <label><input type="checkbox" name="bao_ngay" value="Tài chính/thanh khoản lệch ngưỡng" data-max="4"><span>Tài chính/thanh khoản lệch ngưỡng</span></label><label><input type="checkbox" name="bao_ngay" value="Pháp lý/tuân thủ/cơ quan quản lý" data-max="4"><span>Pháp lý, tuân thủ, cơ quan quản lý</span></label><label><input type="checkbox" name="bao_ngay" value="An toàn vận hành/gián đoạn kinh doanh" data-max="4"><span>An toàn vận hành/gián đoạn kinh doanh</span></label><label><input type="checkbox" name="bao_ngay" value="An ninh mạng/rò rỉ dữ liệu" data-max="4"><span>An ninh mạng/rò rỉ dữ liệu</span></label><label><input type="checkbox" name="bao_ngay" value="Uy tín/truyền thông/khủng hoảng" data-max="4"><span>Uy tín, truyền thông, khủng hoảng</span></label><label><input type="checkbox" name="bao_ngay" value="HĐQT/cổ đông/nhà đầu tư" data-max="4"><span>HĐQT, cổ đông, nhà đầu tư</span></label><label><input type="checkbox" name="bao_ngay" value="Khách hàng/đối tác chiến lược" data-max="4"><span>Khách hàng/đối tác chiến lược</span></label><label><input type="checkbox" name="bao_ngay" value="Nhân sự chủ chốt" data-max="4"><span>Nhân sự chủ chốt</span></label>
         </fieldset>
-        <fieldset data-required="true"><legend>12. Hanh dong nao luon can phe duyet? <small>Chon tat ca phu hop</small></legend>
-          <label><input type="checkbox" name="luon_phe_duyet" value="Gui email/tin nhan"><span>Gui email/tin nhan</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Sua/huy lich"><span>Sua/huy lich</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Giao viec cho nhan su"><span>Giao viec cho nhan su</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Chia se tai lieu"><span>Chia se tai lieu</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Chi phi/hop dong/cam ket"><span>Chi phi/hop dong/cam ket</span></label>
+        <fieldset data-required="true"><legend>8. Trọng tâm quyết định chính trong vai trò hiện tại?</legend>
+          <label><input type="radio" name="trong_tam_quyet_dinh" value="Điều hành hằng ngày"><span>Điều hành và xử lý vấn đề hằng ngày</span></label><label><input type="radio" name="trong_tam_quyet_dinh" value="Hiệu quả tháng/quý"><span>Hiệu quả kinh doanh theo tháng/quý</span></label><label><input type="radio" name="trong_tam_quyet_dinh" value="Chiến lược 1-3 năm"><span>Chiến lược và phân bổ nguồn lực 1–3 năm</span></label><label><input type="radio" name="trong_tam_quyet_dinh" value="Giám sát quản trị HĐQT"><span>Giám sát quản trị, rủi ro và ban điều hành</span></label>
         </fieldset>
       </section>
 
-      <section class="step" data-title="MVP">
-        <p class="eyebrow">PHAN 5/5</p><h2>Uu tien cho phien ban dau tien</h2>
-        <fieldset data-required="true"><legend>13. Chon 3 tinh huong co gia tri nhat cho MVP.</legend>
-          <label><input type="checkbox" name="use_case_mvp" value="Tom tat va phan loai email" data-max="3"><span>Tom tat va phan loai email</span></label><label><input type="checkbox" name="use_case_mvp" value="Ban tin dieu hanh buoi sang" data-max="3"><span>Ban tin dieu hanh buoi sang</span></label><label><input type="checkbox" name="use_case_mvp" value="Quan ly viec va nhac han" data-max="3"><span>Quan ly viec va nhac han</span></label><label><input type="checkbox" name="use_case_mvp" value="Phat hien xung dot lich" data-max="3"><span>Phat hien xung dot lich</span></label><label><input type="checkbox" name="use_case_mvp" value="Tim kiem tai lieu co nguon" data-max="3"><span>Tim kiem tai lieu co nguon</span></label><label><input type="checkbox" name="use_case_mvp" value="Soan du thao email" data-max="3"><span>Soan du thao email</span></label>
+      <section class="step" data-title="Nhịp điều hành">
+        <p class="eyebrow">PHẦN 3/6</p><h2>Nhịp làm việc và kênh tương tác</h2>
+        <fieldset data-required="true"><legend>9. Tần suất nhận bản tin điều hành phù hợp nhất?</legend>
+          <label><input type="radio" name="tan_suat_ban_tin" value="Mỗi sáng ngày làm việc"><span>Mỗi sáng ngày làm việc</span></label><label><input type="radio" name="tan_suat_ban_tin" value="Trước các cuộc họp quan trọng"><span>Trước các cuộc họp quan trọng</span></label><label><input type="radio" name="tan_suat_ban_tin" value="Hằng tuần"><span>Hằng tuần</span></label><label><input type="radio" name="tan_suat_ban_tin" value="Chỉ khi có ngoại lệ/cảnh báo"><span>Chỉ khi có ngoại lệ/cảnh báo</span></label>
         </fieldset>
-        <fieldset data-required="true"><legend>14. Ket qua nao quan trong nhat sau 4 tuan thu nghiem?</legend>
-          <label><input type="radio" name="ket_qua_4_tuan" value="Tiet kiem it nhat 5 gio/tuan"><span>Tiet kiem it nhat 5 gio/tuan</span></label><label><input type="radio" name="ket_qua_4_tuan" value="Khong bo sot viec quan trong"><span>Khong bo sot viec quan trong</span></label><label><input type="radio" name="ket_qua_4_tuan" value="Giam thoi gian chuan bi hop/bao cao"><span>Giam thoi gian chuan bi hop/bao cao</span></label><label><input type="radio" name="ket_qua_4_tuan" value="Goi y dung va it phai sua"><span>Goi y dung va it phai sua</span></label>
+        <fieldset data-required="true"><legend>10. Thời điểm nhận bản tin ưu tiên?</legend>
+          <label><input type="radio" name="gio_ban_tin" value="Trước 7:00"><span>Trước 7:00</span></label><label><input type="radio" name="gio_ban_tin" value="7:00-8:30"><span>7:00–8:30</span></label><label><input type="radio" name="gio_ban_tin" value="Trước cuộc họp 30-60 phút"><span>Trước cuộc họp 30–60 phút</span></label><label><input type="radio" name="gio_ban_tin" value="Theo lịch cá nhân"><span>Theo lịch cá nhân</span></label>
         </fieldset>
-        <label class="field text-field">15. Dieu gi tro ly AI tuyet doi khong duoc lam? <span>(khong bat buoc)</span>
-          <textarea name="hanh_dong_cam" rows="4" placeholder="Vi du: gui thong tin ra ngoai khi chua phe duyet..."></textarea>
+        <fieldset data-required="true"><legend>11. Kênh nên được trợ lý ưu tiên? <small>Chọn tối đa 3</small></legend>
+          <label><input type="checkbox" name="kenh_uu_tien" value="Email" data-max="3"><span>Email</span></label><label><input type="checkbox" name="kenh_uu_tien" value="Zalo" data-max="3"><span>Zalo</span></label><label><input type="checkbox" name="kenh_uu_tien" value="Teams/Slack" data-max="3"><span>Microsoft Teams/Slack</span></label><label><input type="checkbox" name="kenh_uu_tien" value="Lịch và cuộc họp" data-max="3"><span>Lịch và cuộc họp</span></label><label><input type="checkbox" name="kenh_uu_tien" value="Báo cáo/dashboard" data-max="3"><span>Báo cáo/dashboard</span></label><label><input type="checkbox" name="kenh_uu_tien" value="Điện thoại/SMS" data-max="3"><span>Điện thoại/SMS</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>11a. Nhóm cuộc họp/quy trình nào cần trợ lý hỗ trợ nhiều nhất? <small>Chọn tối đa 3</small></legend>
+          <label><input type="checkbox" name="nhom_cuoc_hop" value="Họp điều hành/ExCo" data-max="3"><span>Họp điều hành/ExCo</span></label><label><input type="checkbox" name="nhom_cuoc_hop" value="HĐQT/ủy ban/ĐHĐCĐ" data-max="3"><span>HĐQT, ủy ban, ĐHĐCĐ</span></label><label><input type="checkbox" name="nhom_cuoc_hop" value="Review kinh doanh/KPI" data-max="3"><span>Review kinh doanh/KPI</span></label><label><input type="checkbox" name="nhom_cuoc_hop" value="Khách hàng/đối tác/nhà đầu tư" data-max="3"><span>Khách hàng, đối tác, nhà đầu tư</span></label><label><input type="checkbox" name="nhom_cuoc_hop" value="Cơ quan quản lý/tuân thủ" data-max="3"><span>Cơ quan quản lý/tuân thủ</span></label><label><input type="checkbox" name="nhom_cuoc_hop" value="Công tác/sự kiện" data-max="3"><span>Công tác/sự kiện</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>11b. Khâu nào đang tiêu tốn thời gian hoặc dễ bỏ sót nhất?</legend>
+          <label><input type="radio" name="diem_nghen" value="Lọc thông tin và ưu tiên"><span>Lọc thông tin và xác định ưu tiên</span></label><label><input type="radio" name="diem_nghen" value="Sắp lịch và điều phối"><span>Sắp lịch và điều phối nhiều bên/múi giờ</span></label><label><input type="radio" name="diem_nghen" value="Chuẩn bị họp/tài liệu"><span>Chuẩn bị họp và tài liệu</span></label><label><input type="radio" name="diem_nghen" value="Theo dõi sau họp"><span>Theo dõi quyết định, cam kết và action item</span></label><label><input type="radio" name="diem_nghen" value="Tổng hợp báo cáo"><span>Tổng hợp báo cáo/KPI từ nhiều nguồn</span></label>
+        </fieldset>
+      </section>
+
+      <section class="step" data-title="Thông tin & giao tiếp">
+        <p class="eyebrow">PHẦN 4/6</p><h2>Cách tiếp nhận thông tin và giao tiếp</h2>
+        <fieldset data-required="true"><legend>12. Định dạng tóm tắt Anh/Chị ưu tiên?</legend>
+          <label><input type="radio" name="dinh_dang" value="3-5 gạch đầu dòng"><span>3–5 gạch đầu dòng: vấn đề, tác động, đề xuất</span></label><label><input type="radio" name="dinh_dang" value="Một trang điều hành"><span>Một trang điều hành có đủ bối cảnh</span></label><label><input type="radio" name="dinh_dang" value="Bảng chỉ số/dashboard"><span>Bảng chỉ số/dashboard và ngoại lệ</span></label><label><input type="radio" name="dinh_dang" value="Bản ghi nhớ HĐQT"><span>Bản ghi nhớ trang trọng cho HĐQT</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>13. Ngôn ngữ đầu ra mặc định?</legend>
+          <label><input type="radio" name="ngon_ngu" value="Tiếng Việt"><span>Tiếng Việt</span></label><label><input type="radio" name="ngon_ngu" value="Tiếng Anh"><span>Tiếng Anh</span></label><label><input type="radio" name="ngon_ngu" value="Song ngữ Việt-Anh"><span>Song ngữ Việt–Anh</span></label><label><input type="radio" name="ngon_ngu" value="Theo đối tượng nhận"><span>Tự chọn theo đối tượng nhận</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>14. Khi thông tin chưa chắc chắn, AI nên làm gì?</legend>
+          <label><input type="radio" name="thong_tin_chua_chac" value="Nêu mức tin cậy và nguồn"><span>Nêu rõ mức tin cậy, giả định và nguồn</span></label><label><input type="radio" name="thong_tin_chua_chac" value="Xác minh thêm trước khi trình"><span>Xác minh thêm trước khi trình</span></label><label><input type="radio" name="thong_tin_chua_chac" value="Hỏi lại người phụ trách"><span>Hỏi lại Anh/Chị hoặc người phụ trách</span></label><label><input type="radio" name="thong_tin_chua_chac" value="Không đưa vào"><span>Không đưa vào báo cáo</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>14a. Giọng điệu đầu ra mặc định?</legend>
+          <label><input type="radio" name="giong_dieu" value="Ngắn gọn-trực tiếp"><span>Ngắn gọn, trực tiếp, thiên về hành động</span></label><label><input type="radio" name="giong_dieu" value="Phân tích-trung lập"><span>Phân tích, trung lập, nêu đủ căn cứ</span></label><label><input type="radio" name="giong_dieu" value="Trang trọng-ngoại giao"><span>Trang trọng, thận trọng, ngoại giao</span></label><label><input type="radio" name="giong_dieu" value="Theo đối tượng nhận"><span>Thay đổi theo nội bộ, HĐQT, cổ đông, cơ quan nhà nước và đối tác</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>15. Nội dung nào cần xuất hiện trong bản tin định kỳ? <small>Chọn tối đa 5</small></legend>
+          <label><input type="checkbox" name="noi_dung_ban_tin" value="Lịch và chuẩn bị họp" data-max="5"><span>Lịch và nội dung chuẩn bị họp</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="KPI và ngoại lệ" data-max="5"><span>KPI và ngoại lệ cần chú ý</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Quyết định đang chờ" data-max="5"><span>Quyết định đang chờ</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Cam kết và việc quá hạn" data-max="5"><span>Cam kết và việc quá hạn</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Rủi ro-tuân thủ" data-max="5"><span>Rủi ro, pháp lý, tuân thủ</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Thị trường-đối thủ-chính sách" data-max="5"><span>Thị trường, đối thủ, chính sách ngành</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="HĐQT-cổ đông-nhà đầu tư" data-max="5"><span>HĐQT, cổ đông, nhà đầu tư</span></label><label><input type="checkbox" name="noi_dung_ban_tin" value="Nhân sự chủ chốt" data-max="5"><span>Nhân sự chủ chốt</span></label>
+        </fieldset>
+      </section>
+
+      <section class="step" data-title="Quản trị & bảo mật">
+        <p class="eyebrow">PHẦN 5/6</p><h2>Ủy quyền, dữ liệu và tuân thủ</h2>
+        <fieldset data-required="true"><legend>16. Trong giai đoạn thử nghiệm, AI được phép làm đến mức nào?</legend>
+          <label><input type="radio" name="muc_uy_quyen" value="Chỉ đọc-tóm tắt-đề xuất"><span>Chỉ đọc, tóm tắt và đề xuất</span></label><label><input type="radio" name="muc_uy_quyen" value="Soạn nháp chờ phê duyệt"><span>Soạn nháp và chờ phê duyệt</span></label><label><input type="radio" name="muc_uy_quyen" value="Tự động việc rủi ro thấp"><span>Tự động việc rủi ro thấp theo quy tắc đã duyệt</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>17. Nguồn dữ liệu nào có thể kết nối ở chế độ chỉ đọc? <small>Chọn tất cả phù hợp</small></legend>
+          <label><input type="checkbox" name="nguon_du_lieu" value="Email-Lịch"><span>Email và lịch</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Chat nội bộ"><span>Zalo/Teams/Slack nội bộ</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Tài liệu và biên bản"><span>Kho tài liệu, biên bản, chính sách</span></label><label><input type="checkbox" name="nguon_du_lieu" value="ERP-CRM-HRM"><span>ERP, CRM, HRM</span></label><label><input type="checkbox" name="nguon_du_lieu" value="BI-dashboard"><span>BI/dashboard và báo cáo quản trị</span></label><label><input type="checkbox" name="nguon_du_lieu" value="Chưa cho phép"><span>Chưa cho phép kết nối</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>17a. Hệ sinh thái công nghệ ưu tiên cho pilot?</legend>
+          <label><input type="radio" name="he_sinh_thai" value="Microsoft 365"><span>Microsoft 365</span></label><label><input type="radio" name="he_sinh_thai" value="Google Workspace"><span>Google Workspace</span></label><label><input type="radio" name="he_sinh_thai" value="Kết hợp nhiều hệ thống"><span>Kết hợp nhiều hệ thống</span></label><label><input type="radio" name="he_sinh_thai" value="Hệ thống nội bộ/on-premise"><span>Hệ thống nội bộ/on-premise</span></label><label><input type="radio" name="he_sinh_thai" value="Chưa xác định"><span>Chưa xác định</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>18. Hành động nào luôn cần phê duyệt? <small>Chọn tất cả phù hợp</small></legend>
+          <label><input type="checkbox" name="luon_phe_duyet" value="Gửi giao tiếp ra ngoài"><span>Gửi email/tin nhắn ra ngoài tổ chức</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Giao tiếp nội bộ thay mặt lãnh đạo"><span>Giao tiếp nội bộ thay mặt lãnh đạo</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Sửa lịch/giao việc"><span>Sửa lịch hoặc giao việc</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Chia sẻ tài liệu/dữ liệu"><span>Chia sẻ tài liệu hoặc dữ liệu</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Chi phí-hợp đồng-cam kết"><span>Chi phí, hợp đồng hoặc cam kết</span></label><label><input type="checkbox" name="luon_phe_duyet" value="Nội dung HĐQT/cổ đông/truyền thông"><span>Nội dung gửi HĐQT, cổ đông hoặc truyền thông</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>19. Nhóm dữ liệu/ràng buộc nào cần kiểm soát đặc biệt? <small>Chọn tất cả phù hợp</small></legend>
+          <label><input type="checkbox" name="rang_buoc_du_lieu" value="Dữ liệu cá nhân"><span>Dữ liệu cá nhân và quyền riêng tư</span></label><label><input type="checkbox" name="rang_buoc_du_lieu" value="Tài chính/ngân hàng/bảo hiểm"><span>Dữ liệu tài chính, ngân hàng, bảo hiểm</span></label><label><input type="checkbox" name="rang_buoc_du_lieu" value="Y tế/sức khỏe"><span>Dữ liệu y tế/sức khỏe</span></label><label><input type="checkbox" name="rang_buoc_du_lieu" value="Thông tin nội bộ chưa công bố"><span>Thông tin nội bộ chưa công bố/M&A</span></label><label><input type="checkbox" name="rang_buoc_du_lieu" value="Bí mật kinh doanh/sở hữu trí tuệ"><span>Bí mật kinh doanh/sở hữu trí tuệ</span></label><label><input type="checkbox" name="rang_buoc_du_lieu" value="Quy định ngành/nhà nước"><span>Quy định chuyên ngành, nhà nước hoặc xuyên biên giới</span></label><label><input type="checkbox" name="rang_buoc_du_lieu" value="Chưa xác định"><span>Chưa xác định, cần tư vấn thêm</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>19a. Ai phải xác nhận chính sách quyền hạn và phê duyệt pilot?</legend>
+          <label><input type="radio" name="chu_so_huu_phe_duyet" value="Người dùng lãnh đạo"><span>Người dùng lãnh đạo</span></label><label><input type="radio" name="chu_so_huu_phe_duyet" value="HĐQT/Chủ tịch/Thư ký công ty"><span>HĐQT/Chủ tịch/Thư ký công ty</span></label><label><input type="radio" name="chu_so_huu_phe_duyet" value="IT-Security-Data"><span>IT/Security/Data</span></label><label><input type="radio" name="chu_so_huu_phe_duyet" value="Pháp chế-Tuân thủ"><span>Pháp chế/Tuân thủ</span></label><label><input type="radio" name="chu_so_huu_phe_duyet" value="Phê duyệt liên chức năng"><span>Phê duyệt liên chức năng</span></label><label><input type="radio" name="chu_so_huu_phe_duyet" value="Chưa xác định"><span>Chưa xác định</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>19b. Yêu cầu xử lý dữ liệu khảo sát và dữ liệu pilot?</legend>
+          <label><input type="radio" name="luu_giu_du_lieu" value="Chỉ lưu trên thiết bị/xóa sau bàn giao"><span>Chỉ lưu trên thiết bị và xóa sau khi bàn giao</span></label><label><input type="radio" name="luu_giu_du_lieu" value="Lưu trong tenant theo thời hạn"><span>Lưu trong tenant theo thời hạn được phê duyệt</span></label><label><input type="radio" name="luu_giu_du_lieu" value="Ẩn danh cho nghiên cứu"><span>Chỉ dùng dữ liệu đã ẩn danh cho nghiên cứu</span></label><label><input type="radio" name="luu_giu_du_lieu" value="Cần xác nhận chính sách"><span>Cần Security/Legal xác nhận trước</span></label>
+        </fieldset>
+      </section>
+
+      <section class="step" data-title="MVP & thành công">
+        <p class="eyebrow">PHẦN 6/6</p><h2>Ưu tiên triển khai và tiêu chí thành công</h2>
+        <fieldset data-required="true"><legend>20. Ba tình huống có giá trị nhất cho phiên bản đầu tiên? <small>Chọn tối đa 3</small></legend>
+          <label><input type="checkbox" name="use_case_mvp" value="Bản tin điều hành cá nhân hóa" data-max="3"><span>Bản tin điều hành cá nhân hóa</span></label><label><input type="checkbox" name="use_case_mvp" value="Email/chat ưu tiên và soạn nháp" data-max="3"><span>Email/chat ưu tiên và soạn nháp</span></label><label><input type="checkbox" name="use_case_mvp" value="Chuẩn bị họp/HĐQT" data-max="3"><span>Chuẩn bị họp, ExCo, HĐQT</span></label><label><input type="checkbox" name="use_case_mvp" value="Theo dõi quyết định/cam kết" data-max="3"><span>Theo dõi quyết định, cam kết, việc quá hạn</span></label><label><input type="checkbox" name="use_case_mvp" value="KPI và cảnh báo ngoại lệ" data-max="3"><span>KPI và cảnh báo ngoại lệ</span></label><label><input type="checkbox" name="use_case_mvp" value="Tìm kiếm tài liệu có nguồn" data-max="3"><span>Tìm kiếm, hỏi đáp tài liệu có nguồn</span></label><label><input type="checkbox" name="use_case_mvp" value="Decision memo/phân tích phương án" data-max="3"><span>Decision memo/phân tích phương án</span></label><label><input type="checkbox" name="use_case_mvp" value="Briefing đối tác/thị trường" data-max="3"><span>Briefing đối tác, thị trường, chính sách</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>21. Kết quả quan trọng nhất sau 4–6 tuần thử nghiệm?</legend>
+          <label><input type="radio" name="ket_qua_thu_nghiem" value="Tiết kiệm ít nhất 5 giờ/tuần"><span>Tiết kiệm ít nhất 5 giờ/tuần</span></label><label><input type="radio" name="ket_qua_thu_nghiem" value="Không bỏ sót việc/quyết định quan trọng"><span>Không bỏ sót việc hoặc quyết định quan trọng</span></label><label><input type="radio" name="ket_qua_thu_nghiem" value="Chuẩn bị họp/báo cáo nhanh hơn"><span>Giảm mạnh thời gian chuẩn bị họp/báo cáo</span></label><label><input type="radio" name="ket_qua_thu_nghiem" value="Nâng chất lượng quyết định"><span>Nâng chất lượng và tốc độ ra quyết định</span></label><label><input type="radio" name="ket_qua_thu_nghiem" value="Tăng tính minh bạch/trách nhiệm"><span>Tăng tính minh bạch và trách nhiệm thực thi</span></label>
+        </fieldset>
+        <fieldset data-required="true"><legend>21a. Chỉ số nào nên được đo trong pilot? <small>Chọn tối đa 4</small></legend>
+          <label><input type="checkbox" name="chi_so_pilot" value="Giờ tiết kiệm/người/tuần" data-max="4"><span>Giờ tiết kiệm/người/tuần</span></label><label><input type="checkbox" name="chi_so_pilot" value="Tỷ lệ phát hiện đúng nội dung quan trọng" data-max="4"><span>Tỷ lệ phát hiện đúng nội dung quan trọng</span></label><label><input type="checkbox" name="chi_so_pilot" value="Tỷ lệ đầu ra có nguồn hợp lệ" data-max="4"><span>Tỷ lệ đầu ra có nguồn hợp lệ</span></label><label><input type="checkbox" name="chi_so_pilot" value="Tỷ lệ chấp nhận không sửa lớn" data-max="4"><span>Tỷ lệ chấp nhận không cần sửa lớn</span></label><label><input type="checkbox" name="chi_so_pilot" value="Action item đủ owner-deadline-status" data-max="4"><span>Action item đủ chủ sở hữu, thời hạn, trạng thái</span></label><label><input type="checkbox" name="chi_so_pilot" value="Chất lượng tiếng Việt/thuật ngữ ngành" data-max="4"><span>Chất lượng tiếng Việt/thuật ngữ ngành</span></label><label><input type="checkbox" name="chi_so_pilot" value="Sự cố dữ liệu hoặc vượt quyền bằng 0" data-max="4"><span>Sự cố dữ liệu hoặc vượt quyền nghiêm trọng bằng 0</span></label>
+        </fieldset>
+        <label class="field text-field">22. Điều gì trợ lý AI tuyệt đối không được làm? <span>(không bắt buộc)</span>
+          <textarea name="hanh_dong_cam" rows="4" placeholder="Ví dụ: phát ngôn thay tôi, gửi dữ liệu ra ngoài, dùng tài liệu HĐQT cho mục đích khác..."></textarea>
+        </label>
+        <label class="field text-field">Yêu cầu đặc thù khác của ngành hoặc tổ chức <span>(không bắt buộc)</span>
+          <textarea name="yeu_cau_dac_thu" rows="3" placeholder="Quy định ngành, quy trình phê duyệt, thuật ngữ, hệ thống nội bộ..."></textarea>
         </label>
       </section>
 
-      <section class="step result" data-title="Hoan thanh">
-        <div class="success-mark">&#10003;</div><p class="eyebrow">HOAN THANH</p><h2>Cam on Anh/Chi da hoan thanh khao sat</h2>
-        <p class="lead">Cau tra loi van dang nam tren thiet bi nay. Vui long tai file ket qua va gui cho nguoi phu trach du an.</p>
-        <button type="button" class="primary full" id="downloadBtn">Tai file ket qua</button>
-        <button type="button" class="secondary full" id="copyBtn">Sao che ban tom tat</button>
-        <p class="privacy-note">Sau khi xac nhan da gui file, Anh/Chi co the xoa du lieu da luu tren thiet bi.</p>
-        <button type="button" class="link-button" id="clearBtn">Xoa cau tra loi va lam lai</button>
+      <section class="step result" data-title="Hoàn thành">
+        <div class="success-mark">&#10003;</div><p class="eyebrow">HOÀN THÀNH</p><h2>Cảm ơn Anh/Chị đã hoàn thành khảo sát</h2>
+        <p class="lead">Bấm gửi để lưu kết quả vào database của dự án. Chỉ xóa dữ liệu trên thiết bị sau khi hệ thống xác nhận đã lưu thành công.</p>
+        <button type="button" class="primary full" id="submitBtn">Gửi dữ liệu khảo sát</button>
+        <p class="privacy-note" id="submitStatus" role="status" aria-live="polite"></p>
+        <button type="button" class="secondary full" id="downloadBtn">Tải file kết quả</button>
+        <button type="button" class="secondary full" id="copyBtn">Sao chép bản tóm tắt</button>
+        <p class="privacy-note">Database được lưu cục bộ trong dự án, không tự động gửi lên dịch vụ bên ngoài.</p>
+        <button type="button" class="link-button" id="clearBtn">Xóa câu trả lời và làm lại</button>
       </section>
 
       <div class="error" id="errorMessage" role="alert"></div>
-      <nav id="formNav"><button type="button" class="secondary" id="backBtn">Quay lai</button><button type="button" class="primary" id="nextBtn">Bat dau</button></nav>
+      <nav id="formNav"><button type="button" class="secondary" id="backBtn">Quay lại</button><button type="button" class="primary" id="nextBtn">Bắt đầu</button></nav>
     </form>
   </main>
   <script src="app.js"></script>
