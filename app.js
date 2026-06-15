@@ -37,6 +37,11 @@ async function saveLocal(record,status){const db=await openLocalDb();record.loca
 function summary(data=answers()){return Object.entries(data).map(([k,v])=>`${k}: ${[].concat(v).join('; ')}`).join('\n')}
 function endpoint(){if(config.apiEndpoint)return config.apiEndpoint;if(location.hostname==='127.0.0.1'||location.hostname==='localhost')return '/api/surveys';return ''}
 function sendEmail(record){const recipient=config.resultEmail||'';const subject=`Kết quả khảo sát lãnh đạo - ${record.cau_tra_loi.ma_tenant||record.submission_id}`;const body=`Mã hồ sơ: ${record.submission_id}\nHoàn thành: ${record.hoan_thanh_luc}\n\n${summary(record.cau_tra_loi)}`;location.href=`mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+function postToAppsScript(api,record){
+  if(!navigator.sendBeacon)throw new Error('Trình duyệt chưa hỗ trợ gửi dữ liệu nền');
+  const body=new Blob([JSON.stringify(record)],{type:'text/plain;charset=utf-8'});
+  if(!navigator.sendBeacon(api,body))throw new Error('Trình duyệt chưa tiếp nhận yêu cầu gửi');
+}
 
 const submitBtn=document.getElementById('submitBtn');
 const submitStatus=document.getElementById('submitStatus');
@@ -50,10 +55,8 @@ submitBtn.addEventListener('click',async()=>{
     }
     const api=endpoint();
     if(!api)throw new Error('Chưa cấu hình API database công khai');
-    // Apps Script redirects POST responses to googleusercontent.com. no-cors avoids
-    // browsers treating that redirect as a failed cross-origin response.
-    await fetch(api,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(record)});
-    const result={ok:true,id:record.submission_id,saved_at:new Date().toISOString(),transport:'apps-script-no-cors'};
+    postToAppsScript(api,record);
+    const result={ok:true,id:record.submission_id,saved_at:new Date().toISOString(),transport:'apps-script-beacon'};
     await saveLocal({...record,server_result:result},'sent');localStorage.setItem(`${storageKey}-submission`,JSON.stringify(result));submitStatus.textContent=`Đã gửi đến database dự án và lưu bản sao trên thiết bị. Mã hồ sơ: ${record.submission_id}`;submitBtn.textContent='Đã gửi dữ liệu';
   }catch(e){
     await saveLocal(record,'pending').catch(()=>{});submitStatus.textContent=`Đã lưu an toàn trên thiết bị nhưng chưa gửi được: ${e.message}. Có thể chọn gửi qua email hoặc thử lại sau.`;submitBtn.disabled=false;submitBtn.textContent='Gửi lại dữ liệu khảo sát';
